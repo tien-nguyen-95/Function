@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+        <select  id="select" >
+            <option value="feet">feet</option>
+            <option value="metter">metter</option>
+        </select>
+        <input id="input" type="number" >
+        <button onclick="convert()">convert</button>
+        <span id="output">
+    
+    <script>
+        function convert(){
+            let num=document.getElementById("input").value;
+            let s=document.getElementById("select").value;
+            if(s=='feet'){
+                num = parseFloat(num);
+                document.getElementById("output").innerHTML =num+"ft ="+0.305 * num+"m";
+            }
+            else{
+                num = parseFloat(num);
+                document.getElementById("output").innerHTML =num+"m = "+3.279*num+"ft";
+            }
+        }
+    </script>
+</body>
+</html>
