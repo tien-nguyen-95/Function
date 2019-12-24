@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function findStar(value) {
+        let star1 = [
+          "polaris",
+          "aldebaran",
+          "deneb",
+          "vega",
+          "altair",
+          "dubhe",
+          "regulus"
+        ];
+        let star2 = [
+          "Ursa Minor",
+          "Tarurus",
+          "Cygnus",
+          "Lyra",
+          "Aquila",
+          "Ursa Major",
+          "Leo"
+        ];
+        let position = star1.indexOf(value);
+        if (position != -1) {
+          document.write("Chòm sao tương ứng: " + star2[position]);
+        } else document.write("Không tồn tại");
+      }
+    </script>
+    <script>
+      let star = prompt("Nhập star: ");
+      findStar(star.toLowerCase());
+    </script>
+  </body>
+</html>
