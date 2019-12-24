@@ -8,10 +8,10 @@
 </head>
 <body>
         <select  id="select" >
-            <option value="feet">feet</option>
-            <option value="metter">metter</option>
+            <option value="feet">Feet to Metter</option>
+            <option value="metter">Metter to Feet</option>
         </select>
-        <input id="input" type="number" >
+        <input id="input" type="number" value="" >
         <button onclick="convert()">convert</button>
         <span id="output">
     
@@ -19,13 +19,18 @@
         function convert(){
             let num=document.getElementById("input").value;
             let s=document.getElementById("select").value;
-            if(s=='feet'){
+            if(num >= 0 ){
+                if(s=='feet'){
                 num = parseFloat(num);
                 document.getElementById("output").innerHTML =num+"ft ="+0.305 * num+"m";
+                }
+                else{
+                    num = parseFloat(num);
+                    document.getElementById("output").innerHTML =num+"m = "+3.279*num+"ft";
+                }
             }
             else{
-                num = parseFloat(num);
-                document.getElementById("output").innerHTML =num+"m = "+3.279*num+"ft";
+                document.write("nhập sai");
             }
         }
     </script>
