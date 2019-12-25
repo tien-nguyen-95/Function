@@ -8,11 +8,20 @@
 </head>
 <body>
     <script>
+        function input() {
+            do{
+                num = prompt("nhập");
+            }while(isNaN(num)||parseInt(num)<num || num == '')
+            return num;
+        }
         function square(number){
             alert(number*number);
         }
-        let num=parseInt(prompt("Nhập số: "));
-        square(num);
+        function main() {
+            let num=input();
+            square(num);
+        }
+        main();
     </script>
 </body>
 </html>
