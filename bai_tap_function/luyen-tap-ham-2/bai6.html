@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        function input() {
+            do{
+                num = prompt("nhập");
+            }while(isNaN(num)||parseInt(num)<num || num == '')
+            return num;
+        }
+
+        function check(num) {
+            if(num>0){
+                return true;
+            }
+            return false;
+        }
+        function main() {
+            let inputNum=input();
+            console.log(inputNum);
+            let checkNum=check(inputNum);
+            console.log(checkNum)
+        }
+        main();
+    </script>
+  </body>
+</html>
